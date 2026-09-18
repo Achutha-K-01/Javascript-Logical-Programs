@@ -8,10 +8,12 @@
 <body>
     <script>
         //Find the all Duplicate elements in an Array
-        
+
         let arr = [1, 2, 4, 1, 2, 6, 7, 8, 4];
         let countElements = {};
         let duplicateElements = [];
+
+        function findDuplicates(arr){
         for(let num of arr){
            countElements[num] = (countElements[num] || 0) + 1;
             // if(countElements[num]){
@@ -26,7 +28,10 @@
                 duplicateElements.push(Number(num));
             }
         }
-        console.log(duplicateElements)
+        return duplicateElements;
+        }
+        console.log("Given Array: ", arr)
+        console.log("Duplicate Elements: ",findDuplicates(arr))
     </script>
 </body>
 </html>
