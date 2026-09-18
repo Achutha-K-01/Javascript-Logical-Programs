@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Find the all Duplicate elements in an Array
+        
+        let arr = [1, 2, 4, 1, 2, 6, 7, 8, 4];
+        let countElements = {};
+        let duplicateElements = [];
+        for(let num of arr){
+           countElements[num] = (countElements[num] || 0) + 1;
+            // if(countElements[num]){
+            //     countElements[num]++;
+            // }
+            // else{
+            // countElements[num] = 1;
+            // }
+        }
+        for(let num in countElements){
+            if(countElements[num] > 1){
+                duplicateElements.push(Number(num));
+            }
+        }
+        console.log(duplicateElements)
+    </script>
+</body>
+</html>

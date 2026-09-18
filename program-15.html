@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,0,2,3,0,4,5];
+        function moveZero(a){
+            let index = 0;
+            for(num of a){
+                if(num !== 0){
+                    a[index] = num;
+                    index++;
+                    console.log(a)
+                }
+            }
+            console.log(index)
+            while(index < a.length){
+                a[index] = 0;
+                index++;
+            }
+            console.log(a)
+        }
+
+        console.log(moveZero(arr))
+    </script>
+</body>
+</html>
